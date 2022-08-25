@@ -1,5 +1,4 @@
-# Midnight
-![Midnight Theme: Preview Image](newpreview.png)
+# original midnight description
 
 Midnight is a user style for RobloxForum.com.
 
