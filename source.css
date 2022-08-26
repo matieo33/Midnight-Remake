@@ -1,18 +1,28 @@
 @-moz-document domain("robloxforum.com") {
-/**
------------------------------------------------
------------------------------------------------
-Custom Options */
-.avatar {
-    border-radius: 10%/* This controls the roundness of avatars. 
-        50%+ = Completely circular
-        0% = Square */
+[src="https://www.robloxforum.com/cdn-cgi/image/format=auto,onerror=redirect,quality=50,width=1920,fit=scale-down/https://images.platforum.cloud/banners/robloxforum_com_banner_720w.jpg"] {
+    content: url("https://raw.githubusercontent.com/Cactile/Midnight/main/MidnightLogo2.png");
+    max-width: 600px; 
+    max-height: 600px
 }
 
-.username--style3 {
+.username {
     color: #fd5050;
-    animation: important_name 3s linear 1s infinite;
-    /* This gives the Admin roles a nice rainbow animation.
+    animation: important_name 13s linear 1s infinite;
+    /* gives rainbow animation to all usernames. due to the removal of username styles you can no longer make admin usrnames have rainbow name
+           Remove the "animation" line to disable this animation. */
+}
+
+.thread-title--gtm {
+    color: #fd5050;
+    animation: important_name 13s linear 1s infinite;
+    /* gives thread titles rainbow animation
+           Remove the "animation" line to disable this animation. */
+}
+
+.headerAvatar {
+    border-color: #fd5050;
+    animation: important_name 13s linear 1s infinite;
+    /* gives thread titles rainbow animation
            Remove the "animation" line to disable this animation. */
 }
 
@@ -21,17 +31,32 @@ Custom Options */
     0% {
         color: #fd5050;
     }
+    10% {
+        color: #ff9422
+    }
     20% {
         color: #ffff5d;
+    }
+    30% {
+        color: #9F5
     }
     40% {
         color: #509350;
     }
+    50% {
+        color: #5EF
+    }
     60% {
         color: #6363ff;
     }
+    70% {
+        color: #9C55FF
+    }
     80% {
         color: #883b88;
+    }
+    90% {
+        color: #FF559F
     }
     100% {
         color: #fd5050;
@@ -44,44 +69,6 @@ Custom Options */
 }
 
 @-moz-document domain("robloxforum.com") {
-/**
------------------------------------------------
------------------------------------------------
-Hide "Most Viewed Content" :
-If you want to display the "Most Viewed Content Today" section on the homepage,
-delete the code in this section. */
-.p-body-pageContent .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
-    display: none
-}
-
-.p-body-pageContent .block ~ .block .block-container .block-header {
-    display: none
-}
-/**
------------------------------------------------
------------------------------------------------
-*/
-}
-
-@-moz-document domain("robloxforum.com") {
-/* Main Code
-
-/* Global */
-:root {
-    color: #ddd;
-    background: #200;
-    background: linear-gradient(to bottom, #290000 0px, #000 100%);
-    background: #220000;
-    background: linear-gradient(to bottom, #1a0000 0px, #060000 100%);
-}
-.blockStatus {
-    background: #262626
-}
-.p-sectionLinks {
-    background: #340000;
-    box-shadow: inset 0 0 1em #000, 0 0 0 #000;
-    border-bottom: none;
-}
 a {
     color: #c93f3f;
     /* vouch to the theme designers, "a" sure is descriptive and easy to understand... 
@@ -95,13 +82,54 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
     background: #111111;
 }
 .avatar img {
-    background-color: #ffffff00;
+    color: blue
+}
+a[href*="off-topic"] {
+    color: #F00
+}
+a[href*="site-help"] {
+    color: #FF8000
+}
+a[href*="general-discussion"] {
+    color: #FFE100
+}
+a[href*="help"] {
+    color: #48FF00
+}
+a[href*="everything-roblox"] {
+    color: #00FFE5
+}
+a[href*="scripting"] {
+    color: #004CFF
+}
+a[href*="videos-music"] {
+    color: #E100FF
 }
 .menu-content {
     background: #262626;
 }
+#forum-name {
+    background: #262626
+}
+.message-cell--user {
+    position: relative;
+    right: 30px;
+}
+.message-user {
+    position: relative;
+    left: 30px;
+    top: 20px
+}
+.p-body {
+    background: #2A0F0F;
+    background-image: url('https://github.com/matieo33/Midnight-New-Layout/blob/main/midnightlogo3.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: 750px 750px;
+    background-position: left center;
+    background-attachment: fixed;
+}
 .block-filterBar {
-    background: #0c0c0c;
+    background: #F00;
 }
 .formSubmitRow-bar {
     background: #0c0c0c;
@@ -109,7 +137,7 @@ body .uix_searchBar .uix_searchBarInner .uix_searchForm {
 body .uix_searchBar .uix_searchBarInner .uix_searchForm.uix_searchForm--focused {
     background: #272727
 }
-.messageNotice {
+.col_sidebar  {
     background: #212428;
 }
 .messageNotice.messageNotice--highlighted {
@@ -498,9 +526,7 @@ textarea.input.input--fitHeight {
     background: linear-gradient(to bottom, #2000 0px, #000 100%);
     ;
 }
-.p-footer-inner {
-    background: #000;
-}
+
 .p-footer-copyrightRow {
     background: #000;
     border-top: #000
@@ -556,34 +582,8 @@ tr:hover {
 }
 
 /*
-
 Honestly, the most annoying thing about Midnight is being a non-premium user for it. Advertisements ruin the whole theme because they're so white and bright.
 If you want to enjoy this theme to its fullest, BUY PREMIUM!!!! It's cool and you get many things other than a free adblock!
 $10!!!
-
 */
-}
-
-@-moz-document url("https://www.robloxforum.com/whats-new/") {
-/* Show latest posts on "What's New" page
-These are hidden due to the code that hides "Most Viewed Content"
-so this code readds it.
------------------------------------------------
------------------------------------------------ */
-
-.p-body-pageContent .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
-    display: table
-}
-
-.p-body-pageContent .block ~ .block .block-container .block-header {
-    display: table
-}
-
-.p-body-pageContent .block ~ .block ~ .block .block-container .block-body .structItemContainer .structItem--thread {
-    display: none
-}
-
-.p-body-pageContent .block ~ .block ~ .block .block-container .block-header {
-    display: none
-}
 }
